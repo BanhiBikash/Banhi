@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+    <div class="nav">
+        <div class="logo">
+            <a class="active" href="#">Hello</a>
+        </div>
+
+        <div class="links">
+            <div class="link">
+                <a href="#">Projects</a>
+            </div>
+            <div class="link">
+                <a href="#">About</a>
+            </div>
+            <div class="link">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <button class="menu" onclick="menu()">
+            <img id="menu" style="width:8vw;" src="pic/menu-blue.png" alt="menu"/>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="big-box">
+            <pre class="big-text">
+Hello,
+I am Banhi Bikash Saha
+And I am a website designer
+            </pre>
+            <pre class="small-text">
+I am 21 years old and an aspiring young coder.
+Currently I am doing my Bachelors in Computer application.
+I chose this very course because I always liked technology
+and was always thrilled thinking that I can build something 
+amazing.I like to learn new things that help me enhance myself.
+            </pre>
+            <p style="padding-top: 4%;" class="big-text">
+                SCROLL BELOW TO SEE MY WORK
+            </p>
+        </div>
+
+        <div style="margin-top: 0%;" class="small-box">
+            <img src="pic/mypic1.png" alt="my pic" width="40%">
+            <div class="action">
+                <a href="#"><img src="pic/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="pic/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="pic/telegram.png" alt="twitter"></a>
+                <a href="#"><img src="pic/email2.png" alt="instagram"></a>
+            </div>
+        </div>
+    </div>
+    </center>
+
+    <script>
+        var x=0;    //variable to store current menu state
+
+        function menu()
+        {
+            if(x==0)    //open menu
+            {
+            document.getElementById("menu").src="pic/menu.png";
+            document.getElementByClassName("menu-bttn").style.background="dodgerblue";
+
+            x=1;    //set current menu state
+            }
+
+            else if(x==1)   //close menu
+            {               
+            document.getElementById("menu").src="pic/menu-blue.png";
+            document.getElementsByClassName("menu-bttn").style.background="white";
+
+            x=0;    //set current menu state
+            }
+        }
+    </script>
+</body>
+</html>

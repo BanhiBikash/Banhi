@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color:white;
+}
+
+.nav{
+    width: 97vw;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.links
+{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.links .link{
+}
+
+.links .link a{
+    text-decoration: none;
+    color: rgb(30, 144, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left:2vw ;
+    padding-right: 2vw;
+    border-radius: 0.3vw;
+}
+
+.link a:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.logo a{
+    text-decoration: none;
+    color: rgb(30, 144, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    font-weight: 600;
+    padding-top: 0.4vw;
+    padding-bottom: 0.4vw;
+    padding-left:1.5vw ;
+    padding-right: 1.5vw;
+    border-radius: 0.3vw;
+}
+
+.logo a:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.nav .menu{
+    display: none;
+    background-color: white;
+    border: transparent;
+}
+
+.container{
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    width: 97vw;
+    height: 85vh;
+    background-image:linear-gradient(to bottom right,rgb(223, 0, 193),rgb(252, 152, 239),rgb(223, 0, 193)) ;
+    margin-top: 2.3%;
+    border-radius: 1%;
+}
+
+.big-box{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.small-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+    height: 5vw;
+}
+
+.action img{
+    width: 2vw;
+    box-shadow: grey 2px;
+}
+
+.active{
+    color: rgb(245, 52, 38);
+}
+
+.big-text{
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-size: 3vw;
+    text-align: left;
+    padding: 7vw;
+    padding-bottom: 0vw;
+}
+
+.small-text{
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-size: 1.4vw;
+    text-align:left;
+    padding-left: 7vw;
+}
+
+@media only screen and (max-width:800px)
+{
+    .nav{
+    }
+
+    .links .link a{
+        display: none;
+    }
+
+    .nav .logo{
+        display: block;
+        font-size: 5vw;
+    }
+
+    .nav .menu{
+        display: block;
+    }
+
+    .nav .menu:hover{
+        background-color: antiquewhite;
+        cursor: pointer;
+    }
+
+    .container{align-items: center;
+        height: 100vw;
+    }
+}
