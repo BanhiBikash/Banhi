@@ -151,6 +151,17 @@ body{
     }
 
     .container{align-items: center;
-        height: 100vw;
+        height:fit-content;
+        flex-direction: column-reverse;
+    }
+
+    .big-text{
+        font-size: 5vw;
+        padding-left: 2vw;
+    }
+
+    .small-text{
+        font-size: 3vw;
+        padding-left: 2vw;
     }
 }
