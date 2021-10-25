@@ -41,6 +41,22 @@
         document.getElementById("hire-me").style.width="12vw";
     }
 
+    function dark(value)
+    {
+        if(value==1)
+        {
+            document.getElementById("blue").style.left="2vw";
+            document.getElementById("dark").style.display="none";
+            document.getElementById("blue").style.display="block";
+        }
+
+        else if(value==0)
+        {
+            document.getElementById("blue").style.display="none";
+            document.getElementById("dark").style.display="block";
+        }
+    }
+
     /*
     <div class="big-box">
     <pre class="big-text">

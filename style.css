@@ -74,6 +74,53 @@ body{
     transition: 0.2s;
 }
 
+#dark{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius:10% ;
+    cursor: pointer;
+    height: 1.3vw;
+    width: 3vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    position: relative;
+}
+
+#blue{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius:10% ;
+    cursor: pointer;
+    height: 1.3vw;
+    width: 3vw;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+    align-self: flex-end;
+}
+
+#dark img{
+    width: 1vw;
+    height: 1vw;
+}
+
+#blue img{
+    width: 1vw;
+    height: 1vw;
+}
+
+#dark-con{
+    height: 1.3vw;
+    width: 5vw;
+    background-color: rgb(37, 37, 37);
+    position: relative;
+    border-radius: 10px;
+    cursor:pointer;
+    display: flex;
+    outline: .25vw solid black;
+}
+
 .action{
     display: flex;
     flex-direction: column;
@@ -81,10 +128,10 @@ body{
     align-items: center;
     background-color: white;
     width: 7vw;
-    height: 87vh;
+    height: 47vh;
     position: fixed;
     left: 94vw;
-    top: 4vw;
+    top: 14vw;
     border-radius: 13px;
 }
 
@@ -109,7 +156,7 @@ body{
     height: 87vh;
     margin: 2vw;
     background-color:dodgerblue ;
-    box-shadow: 1vw 1vw .3vw rgb(5, 36, 61) ;
+    box-shadow: 1vw 1vw .3vw rgba(5, 36, 61, 0.705) ;
     border-radius: 10px;
     animation: slide 1.5s;
     animation-fill-mode: forwards;
@@ -118,6 +165,10 @@ body{
     left:5vw;
     top:4vw;
     z-index: 1;
+
+  /*  background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('pic/sweater.jpg'); */
 }
 
 @keyframes slide {
@@ -133,6 +184,7 @@ body{
 #text1{
     font-size: 5vw;
     color: white;
+    font-family: 'Fredoka One', cursive;
     animation: show .5s;
     animation-fill-mode: forwards;
     animation-delay: 1.4s;
@@ -144,51 +196,66 @@ body{
 @keyframes show {
     0%{
         opacity: 0;
+        font-size: 3vw;
     }
 
     100%{
        opacity: 1;
+       font-size: 5vw;
     }
 }
 
-#text2{
+#text2-left{   
     display: inline;
-    font-family: monospace;
-    max-width: fit-content;
+    font-family: 'Festive', cursive;
     position: relative;
     font-size: 2.5vw;
     color: white;
-}
-
-#text2::before{
-    content: '';
-    background-color: dodgerblue;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    animation: typing 3s steps(23) 1.5s forwards;
-}
-
-#text2::after
-{
-   content: '';
-   width: .25vw;
-   background-color: rgb(255, 255, 255);
-   position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    left:-24vw;
+    animation: go-right .5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
     opacity: 0;
-    animation: cursor-move 3s steps(23) 1.5s forwards,
-                blink .5s infinite 1.5s;
+}
+
+#text2-right{   
+    display: inline;
+    font-family: 'Festive', cursive;
+    position: relative;
+    font-size: 2.5vw;
+    color: white;
+    left:24vw;
+    animation: go-left .5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes go-right {
+    0%{
+
+    }
+
+    100%{
+        left:-7vw;
+        opacity: 1;
+    }
+}
+
+@keyframes go-left {
+    0%{
+
+    }
+
+    100%{
+        left:7vw;
+        opacity: 1;
+    }
 }
 
 #text3{
     display: inline;
-    font-family: monospace;
+    font-family: 'Rampart One', monospace;
     max-width: fit-content;
     position: relative;
     font-size: 2.5vw;
@@ -203,7 +270,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-    animation: typing 3s steps(28) 4.5s forwards;
+    animation: typing 4s steps(30) 2.5s forwards;
 }
 
 #text3::after
@@ -217,43 +284,29 @@ body{
     left: 0;
     right: 0;
     opacity: 0;
-    animation: cursor-move 3s steps(28) 4.5s forwards,
-                blink .5s infinite 4.5s;
+    animation: cursor-move 4s steps(30) 2.5s forwards,
+                blink .5s infinite 2.5s;
 }
 
 #text4{
     display: inline;
-    font-family: monospace;
-    max-width: fit-content;
+    font-family: 'Rampart One', monospace;
     position: relative;
     font-size: 2.5vw;
     color: white;
-}
-
-#text4::before{
-    content: '';
-    background-color: dodgerblue;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    animation: typing 3s steps(28) 7.5s forwards;
-}
-
-#text4::after
-{
-   content: '';
-   width: .25vw;
-   background-color: rgb(255, 255, 255);
-   position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    animation: go-up 1s forwards 6.5s;
     opacity: 0;
-    animation: cursor-move 3s steps(28) 7.5s forwards,
-                blink .5s infinite 7.5s;
+}
+
+@keyframes go-up {
+    0%{
+        bottom: -20vh;
+    }
+
+    100%{
+        bottom: 0vh;
+        opacity: 1;
+    }
 }
 
 @keyframes typing {
@@ -274,20 +327,17 @@ body{
 }
 
 @keyframes cursor-move{
-    99.99%{
-        left:100%;
-    }
+    
 
     100%{
-        left: 500%;
+        left: 100%;
     }
 }
 
 .container{
     position: relative;
     display: flex;
-    justify-content:space-evenly;
-    align-items:center;
+    flex-direction: column;
     width: 80vw;
     height: 187vh;
     margin: 2vw;
@@ -295,6 +345,11 @@ body{
     box-shadow: 1vw 1vw .3vw rgb(5, 36, 61) ;
     z-index: 2;
     top:100vh;
+}
+
+.display-case{
+    display: flex;
+    align-items: flex-start;
 }
 
 .big-box{
@@ -364,96 +419,97 @@ body{
     }
 }
 
-
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 15vw;
-    background-color: white;
-    overflow: hidden;
-    box-shadow:1vw 1vw .3vw rgb(31, 56, 82);
-    border: 50vw;
-    border-bottom: 1.5vw solid rgb(14, 100, 170);
-}
-
-.card:hover{
-    width: 17vw;
-    height: 30vw;
-    transition: 0.5s;
-    box-shadow:1vw 1vw .3vw rgb(17, 29, 43);
-}
-
-.pic-container{
-    background-color: black;
-    width: 100%;
-}
-
-#mypic{
-    width: 15vw;
-}
-
-.card .title{
-    font-family: 'Bonheur Royale', cursive;
-    font-size: 2vw;
-    font-weight: 2vw;
-}
-
-.scroll{   
-    font-family: 'Bonheur Royale', cursive;
-    color: brown;
-    text-align: center;
-    font-size: 8vw;
-    font-weight: 900;
-    padding: 2vw;
-}
-
 @media only screen and (max-width:800px)
 {
-    #line{
+    .link{
         display: none;
     }
 
-    .nav{
+    #dark-con{
+        display: none
     }
 
-    .links .link a{
-        display: none;
-    }
-
-    .nav .logo{
-        display: block;
-        font-size: 5vw;
-    }
-
-    .nav .menu{
-        display: block;
-        cursor: pointer;
-    }
-
-    .container{align-items: center;
-        height:fit-content;
-        flex-direction: column-reverse;
-    }
-
-    .big-text{
-        font-size: 5vw;
-        padding-left: 2vw;
-    }
-
-    .small-text{
-        font-size: 3vw;
-        padding-left: 2vw;
+    #text1{
     }
 
     .action{
-        width: 60vw;
-        height: 10vh;
+        border-radius: 5px;
+        height: 30vh;
     }
 
     .action img{
-        width: 6vw;
-        box-shadow: grey 2px;
+        width: 5vw;
+        right: 0;
+    }
+
+    .intro{
+        height: 60vh;
+    }
+
+    @keyframes slide {
+        0%{
+            margin-top: 100vh;
+        }
+
+        100%{
+            margin-top: 2vh;
+        }
+    }
+
+    @keyframes show {
+        0%{
+            opacity: 0;
+            font-size: 3vw;
+        }
+    
+        100%{
+           opacity: 1;
+           font-size: 12vw;
+        }
+    }
+    #text2-left{
+        font-size: 5.5vw;
+    }
+    #text2-right{
+        font-size: 5.5vw;
+    }
+
+    @keyframes go-right {
+        0%{
+    
+        }
+    
+        100%{
+            left:-17vw;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes go-left {
+        0%{
+    
+        }
+    
+        100%{
+            left:17vw;
+            opacity: 1;
+        }
+    }
+
+    #text3{
+        font-size: 4.4vw;
+    }
+
+    #text4{
+        font-size: 4vw;
+    }
+
+    .logo a{
+        padding: 2vw;
+        font-size: 5vw;
+    }
+
+    .nav{
+        padding-top: 2vw;
     }
 }
